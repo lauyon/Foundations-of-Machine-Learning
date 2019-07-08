@@ -154,3 +154,6 @@ Moreover, such applications correspond to a wide variety of learning problems.
   The main practical objectives of machine learning consist of generating accurate predictions for unseen items and of designing eﬃcient and robust algorithms to produce these predictions, even for large-scale problems. To do so, a number of algorithmic and theoretical questions arise. Some fundamental questions include:
 
   机器学习的主要实践目标包括生成对未知项的精确预测，设计高效和强大的算法来生成这些预测，即使是针对大规模问题。为此，出现了许多算法和理论问题。一些基本问题包括：
+   
+   **Figure 1.1** The zig-zag line on the left panel is consistent over the blue and red training sample, but it is a complex separation surface that is not likely to generalize well to unseen data. In contrast, the decision surface on the right panel is simpler and might generalize better in spite of its misclassification of a few points of the training sample.
+   Which concept families can actually be learned, and under what conditions? How well can these concepts be learned computationally?
