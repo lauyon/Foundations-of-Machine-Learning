@@ -223,7 +223,7 @@ Moreover, such applications correspond to a wide variety of learning problems.
   + stage 阶段
   + measure  测量
 
-- *Loss function*: A function that measures the diﬀerence, or loss, between a predicted label and a true label. Denoting the set of all labels as $Y$ and the set of possible predictions as $Y^{'}$ , a loss function L is a mapping $L:Y\times Y^{'} \rightarrow \mathbb R_+ $. In most cases, $Y^{'} = Y$ and the loss function is bounded, but these conditions do not always hold. Common examples of loss functions include the zero-one (or misclassiﬁcation) loss deﬁned over $\{-1,1\} \times \{-1,1\}$  by $(Y,Y^{'})=1_{y^{'}\ne y}$  and the squared loss deﬁned over $I \times I$  by $L(y,y^{'})=(y^{'}-y)^2$, where $I \subseteq \mathbb R​$ is typically a bounded interval. 
+- *Loss function*: A function that measures the diﬀerence, or loss, between a predicted label and a true label. Denoting the set of all labels as $Y$ and the set of possible predictions as $Y^{'}$ , a loss function L is a mapping $L:Y\times Y^{'} \rightarrow \mathbb R_+ $. In most cases, $Y^{'} = Y$ and the loss function is bounded, but these conditions do not always hold. Common examples of loss functions include the zero-one (or misclassiﬁcation) loss deﬁned over $\{-1,1\} \times \{-1,1\}$  by $(Y,Y^{'})=1_{y^{'}\ne y}$  and the squared loss deﬁned over $I \times I$  by $L(y,y^{'})=(y^{'}-y)^2$, where $I \subseteq \mathbb R$ is typically a bounded interval. 
 
 - 损失函数：测量预测标签和真实标签之间差异或损失的函数。将所有标签的集合表示为y，将可能的预测集合表示为y’，损失函数L是一个映射L:y×y'→r+。在大多数情况下，y’=y和损失函数是有界的，但这些条件并不总是成立的。损失函数的常见示例包括对{−1、+1}×{−1、+1} x L（y，y’）=1（y’）的零一（或错误分类）损失进行定义！=y）和用l（y，y’）=（y’-y）2在i×i上定义的平方损失，其中i r通常是一个边界值。
 
@@ -231,9 +231,9 @@ Moreover, such applications correspond to a wide variety of learning problems.
   +  bounded interval 有界区间
   + typically 通常
 
-- Hypothesis set: A set of functions mapping features (feature vectors) to the set of labels $Y​$. In our example, these may be a set of functions mapping email features to $Y​$ = {spam,non-spam}. More generally, hypotheses may be functions mapping features to a diﬀerent set $Y^{'}​$. They could be linear functions mapping email feature vectors to real numbers interpreted as scores  $(Y^{'}=\mathbb R)​$, with higher score values more indicative of spam than lower ones.
+- Hypothesis set: A set of functions mapping features (feature vectors) to the set of labels $Y$. In our example, these may be a set of functions mapping email features to $Y$ = {spam,non-spam}. More generally, hypotheses may be functions mapping features to a diﬀerent set $Y^{'}$. They could be linear functions mapping email feature vectors to real numbers interpreted as scores  $(Y^{'}=\mathbb R)$, with higher score values more indicative of spam than lower ones.
 
-- 假设集：将特征（特征向量）映射到标签集y的一组函数。在我们的示例中，这些函数可能是将电子邮件特征映射到$Y$=垃圾邮件、非垃圾邮件的一组函数。更一般地说，假设可能是将特征映射到不同集合$Y^{'}$的函数。它们可以是线性函数，将电子邮件特征向量映射为实数，并解释为分数 $(Y^{'}=\mathbb R)​$，分数越高，表示垃圾邮件的可能性就越大。
+- 假设集：将特征（特征向量）映射到标签集y的一组函数。在我们的示例中，这些函数可能是将电子邮件特征映射到$Y$=垃圾邮件、非垃圾邮件的一组函数。更一般地说，假设可能是将特征映射到不同集合$Y^{'}$的函数。它们可以是线性函数，将电子邮件特征向量映射为实数，并解释为分数 $(Y^{'}=\mathbb R)$，分数越高，表示垃圾邮件的可能性就越大。
 
   + indicative 表明;标示;显示;暗示;陈述的;指示的
 
@@ -284,12 +284,12 @@ Moreover, such applications correspond to a wide variety of learning problems.
   - aside 到旁边;在旁边;留;存;(用于名词后)除…以外 
   - adopted 采用
 
- Let $θ​$ denote the vector of free parameters of the algorithm. For a ﬁxed value of $θ​$, the method consists of ﬁrst randomly partitioning a given sample $S​$ of $m​$ labeled examples into $n​$ subsamples, or folds. The $i​$th fold is thus a labeled sample (($x_{i1}​$,$y_{i1}​$),...,($x_{im_i}​$,$y_{im_i}​$)) of size $m_i​$. Then, for any $i​$ ∈[1,n], the learning algorithm is trained on all but the $i​$th fold to generate a hypothesis $h_i​$, and the performance of $h_i​$ is tested on the $i​$th fold, as illustrated in ﬁgure 1.2a. The parameter value $θ​$ is evaluated based on the average error of the hypotheses $h_i​$, which is called the *cross-validation error*. This quantity is denoted by $\hat{R}_{CV}( \theta)​$ and deﬁned by 
+ Let $θ$ denote the vector of free parameters of the algorithm. For a ﬁxed value of $θ$, the method consists of ﬁrst randomly partitioning a given sample $S$ of $m$ labeled examples into $n$ subsamples, or folds. The $i$th fold is thus a labeled sample (($x_{i1}$,$y_{i1}$),...,($x_{im_i}$,$y_{im_i}$)) of size $m_i$. Then, for any $i$ ∈[1,n], the learning algorithm is trained on all but the $i$th fold to generate a hypothesis $h_i$, and the performance of $h_i$ is tested on the $i$th fold, as illustrated in ﬁgure 1.2a. The parameter value $θ$ is evaluated based on the average error of the hypotheses $h_i$, which is called the *cross-validation error*. This quantity is denoted by $\hat{R}_{CV}( \theta)$ and deﬁned by 
 $$
 \hat{R}_{CV}( \theta) = \frac 1 n\sum_{i=1}^n\underbrace {\frac 1 m_i\sum_{j=1}^{m_i}L(h_i(x_{ij},y_{ij}))}_{error\ of \ h_i\ on\ the\ ith\ fold}
 $$
 
-The folds are generally chosen to have equal size, that is $m_i=m/n​$ for all $i\in [1,n]​$ . How should $n​$ be chosen? The appropriate choice is subject to a trade-oﬀ and the topic of much learning theory research that we cannot address in this introductory
+The folds are generally chosen to have equal size, that is $m_i=m/n$ for all $i\in [1,n]$ . How should $n$ be chosen? The appropriate choice is subject to a trade-oﬀ and the topic of much learning theory research that we cannot address in this introductory
 
 让θ表示算法自由参数的向量。对于θ的固定值，该方法包括首先将给定的m标记示例样本s随机分为n个子样本或折叠。因此，第i次折叠是一个标记的样本(($x_{i1}$,$y_{i1}$),...,($x_{im_i}$,$y_{im_i}$))，大小为mi。然后，对任意i∈[1，n]的学习算法进行除第i次折叠外的所有训练，生成假设hi，并在第i次折叠上测试hi的性能，如图1.2a所示。根据假设hi的平均误差来评估参数值θ，称为交叉验证错误。该量用 $\hat{R}_{CV}( \theta)$ 表示，用下式表示：
 
@@ -297,7 +297,7 @@ $$
 \hat{R}_{CV}( \theta) = \frac 1 n\sum_{i=1}^n\underbrace {\frac 1 m_i\sum_{j=1}^{m_i}L(h_i(x_{ij},y_{ij}))}_{error\ of \ h_i\ on\ the\ ith\ fold}
 $$
 
-折叠通常被选择具有相同的大小，即对于[1，n]$中的所有$i，都是$m_i=m/n​$。应该如何选择​n呢？适当的选择取决于权衡和许多学习理论研究的主题，我们不能在这篇导论中讨论这些主题。
+折叠通常被选择具有相同的大小，即对于[1，n]$中的所有$i，都是$m_i=m/n$。应该如何选择​n呢？适当的选择取决于权衡和许多学习理论研究的主题，我们不能在这篇导论中讨论这些主题。
 
 ![图1.2](resources/images/图1.2.png)
 
@@ -324,7 +324,7 @@ $$
 
 In machine learning applications, n is typically chosen to be 5 or 10. n-fold cross validation is used as follows in model selection. The full labeled data is ﬁrst split into a training and a test sample. The training sample of size m is then used to compute the n-fold cross-validation error $\hat{R}_{CV}( \theta)$for a small number of possible values of $θ$.$θ$ is next set to the value $θ_0$ for which$\hat{R}_{CV}( \theta)$ is smallest and the algorithm is trained with the parameter setting $θ_0$over the full training sample of size m. Its performance is evaluated on the test sample as already described in the previous section. 
 
-在机器学习应用程序中，n通常选择为5或10。在模型选择中，按如下方式使用n次交叉验证。完整的标签数据首先分为培训和测试样本。然后使用大小为m的训练样本计算少量$θ$可能值的n倍交叉验证误差$\hat{R}_{CV}( \theta)$。$θ$接下来设置为值 $θ_0$，$\hat{R}_{CV}( \theta)$最小，算法在M大小的完整训练样本上使用参数设置 $θ_0​$进行训练。如前一节所述，对测试样本评估其性能。
+在机器学习应用程序中，n通常选择为5或10。在模型选择中，按如下方式使用n次交叉验证。完整的标签数据首先分为培训和测试样本。然后使用大小为m的训练样本计算少量$θ$可能值的n倍交叉验证误差$\hat{R}_{CV}( \theta)$。$θ$接下来设置为值 $θ_0$，$\hat{R}_{CV}( \theta)$最小，算法在M大小的完整训练样本上使用参数设置 $θ_0$进行训练。如前一节所述，对测试样本评估其性能。
 
 The special case of n-fold cross validation where n = m is called leave-one-out cross-validation,since at each iteration exactly one instance is left out of the training sample. As shown in chapter 4, the average leave-one-out error is an approximately unbiased estimate of the average error of an algorithm and can be used to derive simple guarantees for some algorithms. In general, the leave-one-out error is very costly to compute, since it requires training n times on samples of size m−1, but for some algorithms it admits a very eﬃcient computation (see exercise 10.9). In addition to model selection, n-fold cross validation is also commonly used for performance evaluation. In that case, for a ﬁxed parameter setting $θ$, the full labeled sample is divided into n random folds with no distinction between training and test samples. The performance reported is the n-fold cross-validation on the full sample as well as the standard deviation of the errors measured on each fold.
 
@@ -472,4 +472,6 @@ This book presents several fundamental and mathematically well-studied algorithm
 Several fundamental questions arise when designing and analyzing algorithms that learn from examples: What can be learned eﬃciently? What is inherently hard to learn?Howmanyexamplesareneededtolearnsuccessfully?Isthereageneralmodel of learning? In this chapter, we begin to formalize and address these questions by introducing the Probably Approximately Correct (PAC) learning framework. The PAC framework helps deﬁne the class of learnable concepts in terms of the number of sample points needed to achieve an approximate solution, sample complexity, and the time and space complexity of the learning algorithm, which depends on the cost of the computational representation of the concepts. We ﬁrst describe the PAC framework and illustrate it, then present some general learning guarantees within this framework when the hypothesis set used is ﬁnite, both for the consistent case where the hypothesis set used contains the concept to learn and for the opposite inconsistent case.
 ### 2.1 The PAC learning model
 We ﬁrst introduce several deﬁnitions and the notation needed to present the PAC model, which will also be used throughout much of this book. We denote byX the set of all possible examples or instances.X is also sometimes referredtoastheinput space.Thesetofallpossiblelabels ortarget values isdenoted by Y. For the purpose of this introductory chapter, we will limit ourselves to the case where Y is reduced to two labels, Y = {0,1}, so-called binary classiﬁcation. Later chapters will extend these results to more general settings. A concept c: X→Yis a mapping fromX toY. SinceY ={0,1}, we can identify c with the subset of X over which it takes the value 1. Thus, in the following, we equivalently refer to a concept to learn as a mapping fromX to {0,1}, or to a subset of X. As an example, a concept may be the set of points inside a triangle or the indicator function of these points. In such cases, we will say in short that the concept to learn is a triangle. A concept class is a set of concepts we may wish to learn and is denoted by C. This could, for example, be the set of all triangles in the plane. We assume that examples are independently and identically distributed (i.i.d.) according to some ﬁxed but unknown distribution D. The learning problem is then formulated as follows. The learner considers a ﬁxed set of possible concepts H, called a hypothesis set, which may not coincide withC. He receives a sample S =(x1,...,xm) drawn i.i.d. according to D as well as the labels (c(x1),...,c(xm)), which are based on a speciﬁc target conceptc ∈ C to learn. His task is to use the labeled sample S to select a hypothesis hS ∈ H that has a small generalization error with respect to the concept c. The generalization error of a hypothesis h ∈ H, also referred to as the true error or just error of h is denoted by R(h) and deﬁned as follows.1
+
+test
 
